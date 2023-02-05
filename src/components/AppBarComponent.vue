@@ -1,7 +1,17 @@
 <template>
-  <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer">
-      <!--  -->
+    <v-navigation-drawer
+      v-model="drawer"
+      expand-on-hover
+      rail
+    >
+      <v-list
+        density="compact"
+        nav
+      >
+        <v-list-item prepend-icon="mdi-view-dashboard" title="Home" value="home"></v-list-item>
+        <v-list-item prepend-icon="mdi-forum" title="TodoList" value="todoList"></v-list-item>
+        <v-list-item prepend-icon="mdi-account" title="Login" value="login"></v-list-item>
+      </v-list>
     </v-navigation-drawer>
 
     <v-app-bar>
@@ -9,11 +19,6 @@
 
       <v-toolbar-title>Todo</v-toolbar-title>
     </v-app-bar>
-
-    <v-main>
-      <!--  -->
-    </v-main>
-  </v-app>
 </template>
 
 <script setup>

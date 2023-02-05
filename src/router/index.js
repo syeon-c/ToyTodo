@@ -7,6 +7,16 @@ const routes = [
     name: 'HomePage',
     component: () => import('@/views/Hompage.vue'),
   },
+  {
+    path: '/todos',
+    children: [
+      {
+        path: 'list',
+        name: 'TodoListPage',
+        component: () => import('@/views/TodoListPage.vue'),
+      },
+    ]
+  },
 ]
 
 const router = createRouter({

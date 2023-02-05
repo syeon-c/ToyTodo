@@ -1,14 +1,17 @@
 <template>
-  <AppBarComponent>
-
-  </AppBarComponent>
+  <v-app id="list">
+  <AppBarComponent />
+    <v-main>
+      <slot></slot>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
 import AppBarComponent from "@/components/AppBarComponent.vue";
 
 export default {
-  name: "HomeLayout",
+  name: "ListLayout",
   components: {AppBarComponent}
 }
 </script>
